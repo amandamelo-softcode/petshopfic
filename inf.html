@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informações - PET SHOP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        background-color: #f7f1e6;
+        color: #3f2a14;
+      }
+      .hero {
+        background: #ffffff;
+        border-radius: 24px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+      }
+      .btn-return {
+        background-color: #613600;
+        border-color: #613600;
+        color: #ffffff;
+      }
+      .btn-return:hover {
+        background-color: #4b2800;
+        border-color: #4b2800;
+      }
+      header {
+        background-color: #c57f1d;
+      }
+      header a.link-body-emphasis,
+      header .nav-link {
+        color: #613600 !important;
+      }
+      header .nav-link.active {
+        background-color: rgba(97, 54, 0, 0.14) !important;
+      }
+
+      .header-title {
+        color: #ffffff;
+        font-size: 36px !important;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .header-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: 0.75rem;
+        border: 2px solid rgba(255, 255, 255, 0.25);
+      }
+
+      .visually-hidden-focusable {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+
+      .visually-hidden-focusable:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0.5rem;
+        padding: 0.75rem 1rem;
+        background: #ffffff;
+        color: #000000;
+        text-decoration: none;
+        outline: 3px solid #000000;
+        z-index: 1000;
+      }
+
+      .nav-pills .nav-link {
+        color: #613600 !important;
+        background-color: transparent !important;
+      }
+
+      .btn-return {
+        background-color: transparent;
+        font-size: 1.1rem;
+        color: #3f2a14;
+        border: none;
+        padding: 1rem 0;
+        line-height: 1.8;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .list-group-item p {
+        margin-bottom: 1.2rem;
+        font-weight: 400;
+        text-align: justify;
+      }
+
+      .hero h1 {
+        color: #613600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero .lead {
+        color: #704b22;
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      .paw-corner {
+        position: fixed;
+        top: 16%;
+        right: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        align-items: flex-end;
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      .paw-print {
+        width: 1.1rem;
+        height: 1.1rem;
+        border-radius: 50%;
+        background: rgba(97, 54, 0, 0.3);
+        position: relative;
+        animation: paw-glide 2.8s ease-in-out infinite alternate;
+      }
+
+      .paw-print:nth-child(2) {
+        animation-delay: 0.4s;
+        opacity: 0.4;
+        transform: scale(0.95);
+      }
+
+      .paw-print:nth-child(3) {
+        animation-delay: 0.8s;
+        opacity: 0.3;
+        transform: scale(0.85);
+      }
+
+      .paw-print:nth-child(4) {
+        animation-delay: 1.2s;
+        opacity: 0.25;
+        transform: scale(0.75);
+      }
+
+      .paw-print::before,
+      .paw-print::after {
+        content: "";
+        position: absolute;
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: 50%;
+        background: rgba(97, 54, 0, 0.3);
+      }
+
+      .paw-print::before {
+        top: -0.35rem;
+        left: -0.2rem;
+      }
+
+      .paw-print::after {
+        top: -0.35rem;
+        right: -0.2rem;
+      }
+
+      @keyframes paw-glide {
+        0% {
+          transform: translateX(0) translateY(0) scale(1);
+        }
+        50% {
+          transform: translateX(-0.35rem) translateY(0.25rem) scale(0.95);
+        }
+        100% {
+          transform: translateX(0) translateY(0.5rem) scale(0.9);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          padding: 1.8rem 1rem;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .btn-return {
+          width: 100%;
+        }
+
+        .paw-corner {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Ir para o conteúdo</a>
+    <header
+      role="banner"
+      aria-label="Cabeçalho principal"
+      class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+    >
+      <a
+        href="index.html"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+      >
+        <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+        <span class="fs-4 header-title"
+          ><strong><i>PET SHOP</i></strong></span
+        >
+        <img
+          src="gpt-image-2_faz_uma_pata_de_um_cachorro_para_ser_um_icone_do_site_o_nome_do_site_é_PET_SHOP-0.jpg"
+          class="header-icon"
+          alt="Logo do Pet Shop"
+        />
+      </a>
+      <ul class="nav nav-pills" role="navigation" aria-label="Menu principal">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Início</a>
+        </li>
+        <li class="nav-item"><a href="inf.html" class="nav-link active" aria-current="page">Informações</a></li>
+        <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+      </ul>
+    </header>
+    <main id="main-content" role="main" aria-label="Conteúdo principal">
+    <div class="paw-corner" aria-hidden="true">
+      <span class="paw-print"></span>
+      <span class="paw-print"></span>
+      <span class="paw-print"></span>
+      <span class="paw-print"></span>
+    </div>
+    <div class="container py-5">
+      <div class="hero p-4 p-md-5 text-center">
+        <h1 class="display-5 fw-bold">Informações do Pet Shop</h1>
+        <p class="lead mb-4">
+          Aqui você encontra tudo sobre nossos serviços, produtos e cuidados
+          para o seu pet.
+        </p>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="list-group list-group-flush mb-4">
+              <div class="list-group-item">
+                <p>
+                  Fundada em 2000 na França, a Pet Shop nasceu com a missão de
+                  proporcionar bem-estar, saúde e qualidade de vida aos animais de
+                  estimação. Desde sua criação, a empresa tem se destacado por
+                  unir atendimento especializado, produtos de alta qualidade e
+                  soluções inovadoras para atender às necessidades dos pets e de
+                  seus tutores.
+                </p>
+                <p>
+                  Com uma equipe qualificada e apaixonada pelo universo animal, a
+                  Pet Shop oferece uma ampla variedade de serviços, incluindo banho
+                  e tosa, consultas veterinárias, vacinação, hospedagem e
+                  acompanhamento preventivo da saúde dos pets. Além disso,
+                  disponibiliza planos de saúde veterinários, proporcionando mais
+                  segurança e tranquilidade para os tutores no cuidado diário de
+                  seus animais.
+                </p>
+                <p>
+                  A empresa também conta com uma seleção criteriosa de rações
+                  premium e super premium, medicamentos, acessórios, produtos de
+                  higiene e uma linha completa de brinquedos e itens de
+                  enriquecimento ambiental, desenvolvidos para promover diversão,
+                  conforto e qualidade de vida. Pensando sempre em oferecer a
+                  melhor experiência aos clientes, a Pet Shop disponibiliza
+                  promoções exclusivas, programas de fidelidade e cupons de
+                  desconto, tornando o cuidado com os animais ainda mais acessível.
+                </p>
+                <p>
+                  Este projeto foi desenvolvido com o objetivo de apresentar uma
+                  plataforma moderna, intuitiva e responsiva, permitindo que os
+                  usuários conheçam os serviços da empresa, encontrem produtos,
+                  acompanhem ofertas e realizem agendamentos de forma simples e
+                  eficiente.
+                </p>
+              </div>
+            </div>
+            <a href="index.html" class="btn btn-return px-4 py-2"
+              >Voltar para Início</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <footer class="text-center" style="background: linear-gradient(to bottom, #613600 0%, #4a2600 100%); color: #ffffff; padding: 2.5rem 1rem; border-top: 3px solid #8b5a2b; margin-top: 2rem;">
+      <div class="container">
+        <p style="margin: 0; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Desenvolvido por Amanda Melo</p>
+        <p style="margin: 0.6rem 0 0 0; font-size: 0.85rem; color: #e8d5c4; font-style: italic; letter-spacing: 0.3px;">Projeto conceitual para apresentação de design e desenvolvimento web.</p>
+      </div>
+    </footer>
+  </body>
+</html>

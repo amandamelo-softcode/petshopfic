@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Início</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        background-color: #ded2b4;
+      }
+      .form-signin {
+        max-width: 420px;
+        padding: 2rem;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(8px);
+      }
+      .form-signin .form-control,
+      .form-signin .form-floating > label {
+        color: #e9ecef;
+      }
+      .form-signin .form-control {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+      .header-title {
+        color: #ffffff;
+        font-size: 36px !important;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .header-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: 0.75rem;
+        border: 2px solid rgba(255, 255, 255, 0.25);
+      }
+
+      .visually-hidden-focusable {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+
+      .visually-hidden-focusable:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0.5rem;
+        padding: 0.75rem 1rem;
+        background: #ffffff;
+        color: #000000;
+        text-decoration: none;
+        outline: 3px solid #000000;
+        z-index: 1000;
+      }
+
+      .btn-primary {
+        background-color: #b78345 !important;
+        border-color: #b78345 !important;
+        color: #ffffff !important;
+        position: relative;
+      }
+
+      .btn-primary:hover,
+      .btn-primary:focus,
+      .btn-primary:active {
+        background-color: #a66f33 !important;
+        border-color: #a66f33 !important;
+        color: #ffffff !important;
+      }
+
+      .btn-primary:active::after {
+        content: "✅";
+        color: #ffffff !important;
+      }
+
+      .btn-secondary {
+        background-color: #613600 !important;
+        border-color: #613600 !important;
+        color: #ffffff !important;
+      }
+
+      .btn-secondary:hover,
+      .btn-secondary:focus {
+        background-color: #613600 !important;
+        border-color: #613600 !important;
+        color: #ffffff !important;
+      }
+
+      .nav-pills .nav-link {
+        color: #ffffff !important;
+        background-color: transparent !important;
+      }
+
+      header {
+        background-color: #c57f1d;
+      }
+
+      header a.link-body-emphasis,
+      header .nav-link {
+        color: #613600 !important;
+      }
+
+      header .nav-link.active {
+        background-color: rgba(97, 54, 0, 0.14) !important;
+      }
+
+      .hero-bg {
+        background: linear-gradient(135deg, #f5e7d7 0%, #edd6b4 100%);
+        color: #613600;
+      }
+
+      .hero-bg h1,
+      .hero-bg p,
+      .hero-bg a {
+        color: #000000 !important;
+      }
+
+      .card-text {
+        font-style: italic;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        color: #373737;
+      }
+
+      .card-body {
+        min-height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .card-img-top {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 4 / 3;
+      }
+
+      h1[style*="color: #613600"] {
+        padding-left: 2.5rem;
+        font-family: Arial, Helvetica, sans-serif !important;
+      }
+
+      @media (max-width: 768px) {
+        h1[style*="color: #613600"] {
+          padding-left: 1.2rem;
+        }
+      }
+        position: relative;
+        width: 100%;
+        min-height: 5rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 1rem;
+        pointer-events: none;
+      }
+
+      .paw-print {
+        width: 1.1rem;
+        height: 1.1rem;
+        border-radius: 50%;
+        background: rgba(97, 54, 0, 0.3);
+        position: relative;
+        animation: paw-glide 2.8s ease-in-out infinite alternate;
+      }
+
+      .paw-print:nth-child(2) {
+        animation-delay: 0.4s;
+        opacity: 0.4;
+        transform: scale(0.95);
+      }
+
+      .paw-print:nth-child(3) {
+        animation-delay: 0.8s;
+        opacity: 0.3;
+        transform: scale(0.85);
+      }
+
+      .paw-print:nth-child(4) {
+        animation-delay: 1.2s;
+        opacity: 0.25;
+        transform: scale(0.75);
+      }
+
+      .paw-print::before,
+      .paw-print::after {
+        content: "";
+        position: absolute;
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: 50%;
+        background: rgba(97, 54, 0, 0.3);
+      }
+
+      .paw-print::before {
+        top: -0.35rem;
+        left: -0.2rem;
+      }
+
+      .paw-print::after {
+        top: -0.35rem;
+        right: -0.2rem;
+      }
+
+      @keyframes paw-glide {
+        0% {
+          transform: translateX(0) translateY(0) scale(1);
+        }
+        50% {
+          transform: translateX(-0.35rem) translateY(0.25rem) scale(0.95);
+        }
+        100% {
+          transform: translateX(0) translateY(0.5rem) scale(0.9);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-title {
+          font-size: 28px !important;
+        }
+
+        .header-icon {
+          width: 40px;
+          height: 40px;
+        }
+
+        .nav-pills {
+          justify-content: center;
+        }
+
+        .nav-pills .nav-link {
+          padding: 0.4rem 0.75rem;
+          font-size: 0.95rem;
+        }
+
+        .hero-bg {
+          padding: 1.8rem 1rem;
+        }
+
+        .hero-bg h1 {
+          font-size: 2rem;
+        }
+
+        .paw-corner {
+          display: none;
+        }
+      }
+
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100 text-light">
+    <a class="visually-hidden-focusable" href="#main-content">Ir para o conteúdo</a>
+    <header
+      role="banner"
+      aria-label="Cabeçalho principal"
+      class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+    >
+      <a
+        href="index.html"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+      >
+        <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+        <span class="fs-4 header-title"
+          ><strong><i>PET SHOP</i></strong></span
+        >
+        <img
+          src="gpt-image-2_faz_uma_pata_de_um_cachorro_para_ser_um_icone_do_site_o_nome_do_site_é_PET_SHOP-0.jpg"
+          class="header-icon"
+          alt="Logo do Pet Shop"
+        />
+      </a>
+      <ul class="nav nav-pills" role="navigation" aria-label="Menu principal">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active" aria-current="page">Início</a>
+        </li>
+        <li class="nav-item"><a href="inf.html" class="nav-link">Informações</a></li>
+        <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+      </ul>
+    </header>
+    <main id="main-content" role="main" aria-label="Conteúdo principal">
+      <h1 style="color: #613600;"><strong><i> Aqui temos :</i></strong></h1>
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="racao.jpg"
+                class="bd-placeholder-img card-img-top"
+                alt="Ração para pet"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <em style="font-size: 30px;">Rações de alta qualidade e nutritivas!</em>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="petisco.jpg"
+                class="bd-placeholder-img card-img-top"
+                alt="Petiscos para pet"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <em style="font-size: 30px;">Petiscos deliciosos e que não podem faltar!</em>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="brinquedospet.jpg"
+                class="bd-placeholder-img card-img-top"
+                alt="Brinquedos para pet"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <em style="font-size: 30px;">Brinquedos que seu pet vai adorar!</em>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+    <div class="paw-corner" aria-hidden="true">
+      <span class="paw-print"></span>
+      <span class="paw-print"></span>
+      <span class="paw-print"></span>
+      <span class="paw-print"></span>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis hero-bg">
+      <div class="col-lg-6 px-0">
+        <h1 class="display-4 fst-italic" _msttexthash="1428960" _msthash="23">
+          Pet Shop: Cuidando do seu melhor amigo com amor e qualidade
+        </h1>
+        <p class="lead my-3" _msttexthash="13070291" _msthash="24">
+          A pet shop é um estabelecimento comercial que oferece uma variedade de
+          produtos e serviços para animais de estimação, como rações,
+          brinquedos, acessórios, banho e tosa, entre outros. O objetivo
+          principal de uma pet shop é atender às necessidades dos donos de pets,
+          proporcionando um ambiente acolhedor e produtos de qualidade para
+          garantir o bem-estar dos animais.
+        </p>
+        <p class="lead mb-0">
+          <a href="inf.html" class="btn btn-primary px-4 py-2">
+            Continuar
+          </a>
+        </p>
+      </div>
+    </div>
+    <footer class="mt-auto text-center" style="background: linear-gradient(to bottom, #613600 0%, #4a2600 100%); color: #ffffff; padding: 2.5rem 1rem; border-top: 3px solid #8b5a2b;">
+      <div class="container">
+        <p style="margin: 0; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Desenvolvido por Amanda Melo</p>
+        <p style="margin: 0.6rem 0 0 0; font-size: 0.85rem; color: #e8d5c4; font-style: italic; letter-spacing: 0.3px;">Projeto conceitual para apresentação de design e desenvolvimento web.</p>
+      </div>
+    </footer>
+  </body>
+</html>
